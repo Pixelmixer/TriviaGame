@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
+
 var questions = [
 	{
 		number:"1",
+		result: "",
 	 	question: "What is Albus Dumbledor's full name?",
-	 	answers: ["&nbsp; Albus Percival Wulfric Brian Dumbledore", "&nbsp; Albus Percival Dumbledore", "&nbsp; Albus Sirius James Dumbledore", "&nbsp; Professor Dumbledore doesn't have a middle name"],
+	 	answers: ["&nbsp; Albus Percival Wulfric Brian Dumbledore<br>", "&nbsp; Albus Percival Dumbledore<br>", "&nbsp; Albus Sirius James Dumbledore<br>", "&nbsp; Professor Dumbledore doesn't have a middle name<br>"],
 		answerKey: ["right", "wrong", "wrong", "wrong"],
 	 	picture: "http://vignette3.wikia.nocookie.net/harrypotter/images/4/40/Albus_Dumbledore_%28HBP_promo%29_3.jpg/revision/latest/scale-to-width-down/250?cb=20150822232849"
 
@@ -13,6 +15,7 @@ var questions = [
 	
 	{
 		number:"2",
+		result: "",
 	 	question:"What is Dumbledore's phoenix's name?",
 	 	answers: ["Fawkes", "Fire", "Phoenix", "Fox"],
 	 	answerKey: ["right", "wrong", "wrong", "wrong"],
@@ -21,32 +24,22 @@ var questions = [
 
 	},
 
-	/*{
-		number:"3",
-	 	question:"What house did Professor Slughorn belong to when he was at Hogwarts?",
-	 	answers: [
-				"<img src='http://vignette1.wikia.nocookie.net/harrypotter/images/8/8e/0.31_Gryffindor_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161124074004'>",
-				"<img src='http://vignette4.wikia.nocookie.net/harrypotter/images/d/d3/0.61_Slytherin_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182557'>", 
-				"<img src='http://vignette2.wikia.nocookie.net/harrypotter/images/5/50/0.51_Hufflepuff_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182518'>",
-				"<img src='http://vignette2.wikia.nocookie.net/harrypotter/images/2/29/0.41_Ravenclaw_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182442'>"],
-		answerKey: ["wrong", "rignt", "wrong", "wrong"],
-	 	picture: "http://vignette3.wikia.nocookie.net/harrypotter/images/e/e0/Horace_Slughorn.jpg/revision/latest/scale-to-width-down/250?cb=20121226172917"
-	},*/
 	{
 		number:"3",
+		result: "",
 	 	question:"What house did Professor Slughorn belong to when he was at Hogwarts?",
-	 	answers: ["<img src='http://vignette1.wikia.nocookie.net/harrypotter/images/8/8e/0.31_Gryffindor_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161124074004'>",
-				"<img src='http://vignette4.wikia.nocookie.net/harrypotter/images/d/d3/0.61_Slytherin_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182557'>", 
-				"<img src='http://vignette2.wikia.nocookie.net/harrypotter/images/5/50/0.51_Hufflepuff_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182518'>",
-				"<img src='http://vignette2.wikia.nocookie.net/harrypotter/images/2/29/0.41_Ravenclaw_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182442'>"],
-	 	answerKey: [ "wrong","right", "wrong", "wrong"],
-	 	picture: "https://images.pottermore.com/bxd3o8b291gf/1TRjbRjNru8ccsSqIGmcuY/3359df332c1eb6eb9edbeeafc9280643/Fawkes_WB_F2_FawkesMeetingHarryPotter_Still_100615_Land.jpg?w=500"
-
-
+	 	answers: [
+				"<label><img src='http://vignette1.wikia.nocookie.net/harrypotter/images/8/8e/0.31_Gryffindor_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161124074004'></label",
+				"<label><img src='http://vignette4.wikia.nocookie.net/harrypotter/images/d/d3/0.61_Slytherin_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182557'></label>", 
+				"<label><img src='http://vignette2.wikia.nocookie.net/harrypotter/images/5/50/0.51_Hufflepuff_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182518'></label>",
+				"<label><img src='http://vignette2.wikia.nocookie.net/harrypotter/images/2/29/0.41_Ravenclaw_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182442'></label>"],
+		answerKey: ["wrong", "right", "wrong", "wrong"],
+	 	picture: "http://vignette3.wikia.nocookie.net/harrypotter/images/e/e0/Horace_Slughorn.jpg/revision/latest/scale-to-width-down/250?cb=20121226172917"
 	},
 
 	{
 		number:"4",
+		result: "",
 	 	question:"Who pulled the sword of Gryffindor from the sorting hat during the battle at Hogwarts?",
 	 	answers: [
 				"&nbsp; Mrs. Weasley",
@@ -60,6 +53,7 @@ var questions = [
 
 	{
 		number:"5",
+		result: "",
 	 	question:"Is Seamus Finnigan a mudblood or pure-blood?",
 	 	answers: [
 	 		"&nbsp; mudblood", 
@@ -74,62 +68,82 @@ console.log(questions[0].answers);
 console.log(questions[0].answerKey[0]);
 console.log(questions[0].answers[0]);
 var qNo = 1;
-var qIndex = qNo-1;
+var qIndex = 0;
 var right = 0;
 var wrong = 0;
-
+var userAnswers = ["","","","",""];
 
 
 //display first question and answer choices:
 $(".start").on("click", loadQuestion);
+//$(".start").on("click", run);
 $(".next").on("click", loadQuestion);
-$("input").on("click", answerSelect);
-$(".btn-success").on("click", answerSubmit);
+$(document).on("click",".notSelected", answerSelect);
+$(document).on("click",".btn-default", loadQuestion);
+$(".btn-default").on("click", answerSubmit);
 
 	function loadQuestion() {
-	$(".answerChoices").empty();
-	console.log(qNo);
-	console.log(qIndex);
-	$(".questionText").html(questions[qIndex].question);
+		$(".answerChoices").empty();
+		console.log(qNo);
+		console.log(qIndex);
+		$(".questionText").append().html("<h3>"+questions[qIndex].question+"</h3>");
 	
 		for ( i = 0; i < questions[qIndex].answers.length; i++ ) {
-		var choices = $(".answerChoices").append('<input type="radio" name="answerChoice" class="notSelected '+questions[qIndex].answerKey[i]+' '+qIndex+ '">' +questions[qIndex].answers[i]+ '<br>');
+		var choices = $(".answerChoices").append('<input type="radio" name="answerChoice" class="notSelected '+questions[qIndex].answerKey[i]+' '+qIndex+ '">' +questions[qIndex].answers[i]);
 		console.log(choices);
 		};
 	};	
 
 
 	function answerSelect() {
-			//console.log(this);
-			//$(this).addClass("selectedAnswer");
-			//$(this).removeClass("notSelected");
-
+		($(this).addClass("selected"));
+		console.log($(this));
 		if ($(this).hasClass("right")) {
-				questions[qNo].correct=true;
-			}
+			userAnswers.splice(qIndex,1,"<li>right</li>");
 
-			else {
-				questions[qNo].correct=true;	
-			}
+			
+		}
+			else {userAnswers.splice(qIndex,1,"<li>wrong</li>");}
+			console.log(userAnswers);
+
+
 		};	
 
 			
-
 	function answerSubmit (){
 		qNo++; qIndex++;
+		$(".score").empty();
 		if (qNo > questions.length) {
-			alert("Game over, you got the following: INSERT ALERT FOR RESULTS");
-
+			stop();
+			$(".questionText").html("<h1>You've completed the challenge!</h1> <p>Here's how you did!<p>");
+			$(".score").append().html(userAnswers);	
 		}
 
 			else{
 			console.log("Question Number: "+qNo+" up next.");
 			console.log("Index Number: "+qIndex);
-			$(".btn-info").html("Next Question...").addClass("next").removeClass("start");}
+			//$(".btn-info").html("Next Question...").addClass("next").removeClass("start");
+			
+
+			//$(".score").append(userAnswers.join(" "));
+		}
+
 	};
 
+	function getScore (){
+
+		for (i=0; i<userAnswers.length; i++) {
+
+			if (userAnswers[i] = "right") {
+				right++;
+				console.log(right);
+			}
+			else {wrong++};
+			}
+		};
+
 //keep & start counter
-var number = 90; 
+var number = 120; 
     //  Variable that will hold our interval ID when we execute
     //  the "run" function
     var intervalId;
@@ -158,14 +172,14 @@ var number = 90;
       minutes = "0" + minutes;
     }
       //  Show the number in the #show-number tag.
-      //***********$("#show-number").html("<h2>" + minutes + ":" + seconds + "</h2>");
+      $("#show-number").html("<h2>" + minutes + ":" + seconds + "</h2>");
       //console.log(minutes + ":" + seconds);
       //  Once number hits zero...
       if (number === 0) {
         //  ...run the stop function.
         stop();
         //  Alert the user that time is up.
-       //************* alert("Time Up!");
+       alert("Time Up!");
       }
     }
     //  The stop function
@@ -176,7 +190,7 @@ var number = 90;
       clearInterval(intervalId);
     };
     //  Execute the run function.
-    run();
-});
+    
 
+});
 	

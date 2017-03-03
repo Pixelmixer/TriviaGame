@@ -1,0 +1,38 @@
+.panel-heading	{
+    text-align: center;
+    font-family: 'Princess Sofia', cursive;
+    font-size: 42px;
+    background-color: 
+}
+
+.start {
+	font-family: 'Princess Sofia', cursive;
+	display: inline;
+}
+
+.jumbotron {
+ background-color: #260E08;
+ color:#FCF9E3;
+ font-family: 'Princess Sofia', cursive;
+ text-align: center;
+}
+
+input[type="checkbox"], 
+input[type="radio"],
+input.radio,
+input.checkbox {
+    vertical-align:text-top;
+    width:13px;
+    height:13px;
+    padding:0;
+    margin:0;
+    position:relative;
+    overflow:hidden;
+    top:2px;
+}
+
+FCF9E3 - cream
+648C8B - peacock
+BED3EA - boy blue
+260E08 - maroon
+9ECFD1 - aqua
