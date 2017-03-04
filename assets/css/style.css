@@ -1,20 +1,32 @@
 .panel-heading	{
     text-align: center;
     font-family: 'Princess Sofia', cursive;
-    font-size: 42px;
+    font-size: 48px;
     background-color: 
+}
+.glyphicon{
+	font-size:20px;
+
+}
+
+.btn {
+
+	font-size: 24px;
 }
 
 .start {
-	font-family: 'Princess Sofia', cursive;
+	font-family: 'Amatic SC', cursive;
 	display: inline;
 }
 
 .jumbotron {
- background-color: #260E08;
- color:#FCF9E3;
+
+ background-color: #562a1f;
+ color:#FCF9E3 ;
  font-family: 'Princess Sofia', cursive;
  text-align: center;
+ text-shadow: black 0.3em 0.3em 0.3em;
+
 }
 
 input[type="checkbox"], 
@@ -24,15 +36,25 @@ input.checkbox {
     vertical-align:text-top;
     width:13px;
     height:13px;
-    padding:0;
+    padding-left:4%;
     margin:0;
     position:relative;
     overflow:hidden;
     top:2px;
 }
 
+body{
+	background-image: url("../images/hp-background.png");
+	background-color: #B54747;
+}
+
+.panel-body {
+ 	font-size: 30px;
+	font-family: 'Amatic SC', cursive;
+}
+
 FCF9E3 - cream
 648C8B - peacock
 BED3EA - boy blue
-260E08 - maroon
+562a1f - maroon
 9ECFD1 - aqua

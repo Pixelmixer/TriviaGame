@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+	alert('You have 2 minutes left to complete your O.W.L.s -- make your selection and click "Submit" to make your way through the test.')
+	var audioElement = document.createElement("audio");
+      audioElement.setAttribute("src", "assets/hedwig-theme.m4a");
+
+    $(".theme-button").click(function() {
+    	audioElement.play();
+    });
+
+    $(".pause-button").click(function() {
+    	audioElement.pause();
+    });
 
 var questions = [
 	{
@@ -8,7 +19,7 @@ var questions = [
 	 	question: "What is Albus Dumbledor's full name?",
 	 	answers: ["&nbsp; Albus Percival Wulfric Brian Dumbledore<br>", "&nbsp; Albus Percival Dumbledore<br>", "&nbsp; Albus Sirius James Dumbledore<br>", "&nbsp; Professor Dumbledore doesn't have a middle name<br>"],
 		answerKey: ["right", "wrong", "wrong", "wrong"],
-	 	picture: "http://vignette3.wikia.nocookie.net/harrypotter/images/4/40/Albus_Dumbledore_%28HBP_promo%29_3.jpg/revision/latest/scale-to-width-down/250?cb=20150822232849"
+	 	picture: "<img src='http://vignette3.wikia.nocookie.net/harrypotter/images/4/40/Albus_Dumbledore_%28HBP_promo%29_3.jpg/revision/latest/scale-to-width-down/250?cb=20150822232849'/>"
 
 	},
 
@@ -17,9 +28,9 @@ var questions = [
 		number:"2",
 		result: "",
 	 	question:"What is Dumbledore's phoenix's name?",
-	 	answers: ["Fawkes", "Fire", "Phoenix", "Fox"],
+	 	answers: ["&nbsp; Fawkes<br>", "&nbsp; Fire<br>", "&nbsp; Phoenix<br>", "&nbsp; Fox<br>"],
 	 	answerKey: ["right", "wrong", "wrong", "wrong"],
-	 	picture: "https://images.pottermore.com/bxd3o8b291gf/1TRjbRjNru8ccsSqIGmcuY/3359df332c1eb6eb9edbeeafc9280643/Fawkes_WB_F2_FawkesMeetingHarryPotter_Still_100615_Land.jpg?w=500"
+	 	picture: "<img src='https://images.pottermore.com/bxd3o8b291gf/1TRjbRjNru8ccsSqIGmcuY/3359df332c1eb6eb9edbeeafc9280643/Fawkes_WB_F2_FawkesMeetingHarryPotter_Still_100615_Land.jpg?w=250'/>"
 
 
 	},
@@ -29,12 +40,12 @@ var questions = [
 		result: "",
 	 	question:"What house did Professor Slughorn belong to when he was at Hogwarts?",
 	 	answers: [
-				"<label><img src='http://vignette1.wikia.nocookie.net/harrypotter/images/8/8e/0.31_Gryffindor_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161124074004'></label",
-				"<label><img src='http://vignette4.wikia.nocookie.net/harrypotter/images/d/d3/0.61_Slytherin_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182557'></label>", 
-				"<label><img src='http://vignette2.wikia.nocookie.net/harrypotter/images/5/50/0.51_Hufflepuff_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182518'></label>",
-				"<label><img src='http://vignette2.wikia.nocookie.net/harrypotter/images/2/29/0.41_Ravenclaw_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182442'></label>"],
+				"<label>&nbsp; <img src='http://vignette1.wikia.nocookie.net/harrypotter/images/8/8e/0.31_Gryffindor_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161124074004'></label>&nbsp; ",
+				"<label>&nbsp; <img src='http://vignette4.wikia.nocookie.net/harrypotter/images/d/d3/0.61_Slytherin_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182557'></label>&nbsp; ", 
+				"<label>&nbsp; <img src='http://vignette2.wikia.nocookie.net/harrypotter/images/5/50/0.51_Hufflepuff_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182518'></label>&nbsp; ",
+				"<label>&nbsp; <img src='http://vignette2.wikia.nocookie.net/harrypotter/images/2/29/0.41_Ravenclaw_Crest_Transparent.png/revision/latest/scale-to-width-down/50?cb=20161020182442'></label> &nbsp; "],
 		answerKey: ["wrong", "right", "wrong", "wrong"],
-	 	picture: "http://vignette3.wikia.nocookie.net/harrypotter/images/e/e0/Horace_Slughorn.jpg/revision/latest/scale-to-width-down/250?cb=20121226172917"
+	 	picture: "<img='http://vignette3.wikia.nocookie.net/harrypotter/images/e/e0/Horace_Slughorn.jpg/revision/latest/scale-to-width-down/250?cb=20121226172917'/>"
 	},
 
 	{
@@ -42,12 +53,12 @@ var questions = [
 		result: "",
 	 	question:"Who pulled the sword of Gryffindor from the sorting hat during the battle at Hogwarts?",
 	 	answers: [
-				"&nbsp; Mrs. Weasley",
-				"&nbsp; Dean Thomas",
-				"&nbsp; Neville Longbottom",
-				"&nbsp; Seamus Finnigan"],
+				"&nbsp; Mrs. Weasley<br>",
+				"&nbsp; Dean Thomas<br>",
+				"&nbsp; Neville Longbottom<br>",
+				"&nbsp; Seamus Finnigan<br>"],
 		answerKey: ["wrong", "wrong", "right", "wrong"],
-	 	picture: "https://s-media-cache-ak0.pinimg.com/236x/13/df/a0/13dfa01e3d657b47ac2212c3ce3e58a1.jpg"
+	 	picture: "<img src='https://s-media-cache-ak0.pinimg.com/236x/13/df/a0/13dfa01e3d657b47ac2212c3ce3e58a1.jpg'/>"
 
 	},
 
@@ -56,10 +67,10 @@ var questions = [
 		result: "",
 	 	question:"Is Seamus Finnigan a mudblood or pure-blood?",
 	 	answers: [
-	 		"&nbsp; mudblood", 
-			"&nbsp; pure-blood"], 
+	 		"&nbsp; mudblood<br>", 
+			"&nbsp; pure-blood<br>"], 
 	 	answerKey: ["right", "wrong"],
-	 	picture: "https://s-media-cache-ak0.pinimg.com/originals/3a/85/35/3a85355cba06cfd67debd7fde8adf42d.jpg"
+	 	picture: "<img width='250px' src='https://s-media-cache-ak0.pinimg.com/originals/3a/85/35/3a85355cba06cfd67debd7fde8adf42d.jpg'/>"
 
 	}
 ];
@@ -76,7 +87,10 @@ var userAnswers = ["","","","",""];
 
 //display first question and answer choices:
 $(".start").on("click", loadQuestion);
-//$(".start").on("click", run);
+$(".start").on("click", run);
+$(".start").click(function() {
+ 	audioElement.play();
+    });
 $(".next").on("click", loadQuestion);
 $(document).on("click",".notSelected", answerSelect);
 $(document).on("click",".btn-default", loadQuestion);
@@ -84,17 +98,14 @@ $(".btn-default").on("click", answerSubmit);
 
 	function loadQuestion() {
 		$(".answerChoices").empty();
-		console.log(qNo);
-		console.log(qIndex);
+		$(".picture").html(questions[qIndex].picture);
 		$(".questionText").append().html("<h3>"+questions[qIndex].question+"</h3>");
 	
 		for ( i = 0; i < questions[qIndex].answers.length; i++ ) {
 		var choices = $(".answerChoices").append('<input type="radio" name="answerChoice" class="notSelected '+questions[qIndex].answerKey[i]+' '+qIndex+ '">' +questions[qIndex].answers[i]);
-		console.log(choices);
+		console.log(choices);}
 		};
-	};	
-
-
+		
 	function answerSelect() {
 		($(this).addClass("selected"));
 		console.log($(this));
@@ -115,32 +126,19 @@ $(".btn-default").on("click", answerSubmit);
 		$(".score").empty();
 		if (qNo > questions.length) {
 			stop();
-			$(".questionText").html("<h1>You've completed the challenge!</h1> <p>Here's how you did!<p>");
+			$(".questionText").html("<h1>You've completed the challenge!</h1>");
 			$(".score").append().html(userAnswers);	
+			$(".picture").empty();
 		}
 
 			else{
 			console.log("Question Number: "+qNo+" up next.");
 			console.log("Index Number: "+qIndex);
 			//$(".btn-info").html("Next Question...").addClass("next").removeClass("start");
-			
 
-			//$(".score").append(userAnswers.join(" "));
 		}
 
 	};
-
-	function getScore (){
-
-		for (i=0; i<userAnswers.length; i++) {
-
-			if (userAnswers[i] = "right") {
-				right++;
-				console.log(right);
-			}
-			else {wrong++};
-			}
-		};
 
 //keep & start counter
 var number = 120; 

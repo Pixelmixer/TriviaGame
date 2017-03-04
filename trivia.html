@@ -20,7 +20,7 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="assets/javascript/app.js"></script>
   <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Princess+Sofia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Princess+Sofia" rel="stylesheet">
 
   </head>
   <body>
@@ -29,6 +29,9 @@
     <div class="container">
       <h1>Hermoine's Quiz</h1>
       <p><a class="btn btn-warning btn-info btn-lg start" href="#" role="button">Lumos!</a></p>
+      <br><br><button class="theme-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect"><span class="glyphicon glyphicon-music"></span></button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="pause-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"><span class="glyphicon glyphicon-pause"></span></button>
     </div>
   </div>	
 	
@@ -51,31 +54,49 @@
     </div>
 
     <div class="row row3">
-      <div class="col-lg-10 col-offset-1 col1">
-    <div class="panel panel-info">
+      <div class="col-lg-12 col1">
+    <div class="panel panel-warning">
       <div class="panel-heading questionText">
-        Prepare for your O.W.L.s 
+        <p>Click "lumos!" to take your O.W.L.s</p>
+
       </div>
       <div class="panel-body">
-      <ol class="score"></ol>
-        <form class="answerChoices">
+        <div class="row">
+          <div class="col-lg-10 col-offset-1 full-width">
+            <ol class="score"></ol>
+          </div>
+        </div>
         
-        <!--this is where radio buttons go-->
+        <div class="row">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-3">    
+            <div class="picture"></div>
+          </div>
+          <div class="col-lg-6">
+            <form class="answerChoices">
+              
+              <!--this is where radio buttons go-->
 
-        </form>
-      <!--end col1-->
-      <br>
-      <button type="button" class="btn btn-default"> Submit </button>
+              </form>
+          </div>
+          
+
+        <div class="col-lg-1"><br>
+          <button type="button" class="btn btn-default"> Submit </button>
+        </div>
+        </div>
+        </div>
+        <!--end col1-->
+        <div class="col-lg-10 col-offset-1 col1 timer" id="show-number">
       </div>
-      </div>
+    </div>
     <!--end row3-->
     </div>
     </div>
 
      <div class="row rowTime">
      
-      <div class="col-lg-10 col-offset-1 col1 timer" id="show-number">
-      </div>
+      
     </div>
 
 
